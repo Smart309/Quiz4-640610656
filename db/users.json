@@ -16,5 +16,11 @@
     "password": "$2a$12$6lU7JRPa1lbbxnZlGBGJVOWcLxCxKphY2hyhMFydu8Yiyn.kWLAou",
     "isAdmin": false,
     "money": 500
+  },
+  {
+    "username": "admin2",
+    "password": "$2b$12$V/mK8jg4VLO/mRiGcmKdN.EO0mK/oUgXylcNgoqKxSzpGoxmWOG7a",
+    "isAdmin": true,
+    "money": null
   }
 ]

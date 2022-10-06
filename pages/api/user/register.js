@@ -7,14 +7,12 @@ export default function userRegisterRoute(req, res) {
     const { username, password, isAdmin } = req.body;
 
     //check authentication
-    if (isAdmin) {
-      const user = checkToken(req);
-      if (!user || user.isAdmin) {
-        return res.status(403).json({
-          ok: false,
-          message: "You do not have permission to create account",
-        });
-      }
+    const user = checkToken(req);
+    if (!user || !user.isAdmin) {
+      return res.status(403).json({
+        ok: false,
+        message: "You do not have permission to create account",
+      });
     }
     //return res.status(403).json({ok: false,message: "You do not have permission to create account",});
 
